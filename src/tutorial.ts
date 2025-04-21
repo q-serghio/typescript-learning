@@ -13,6 +13,7 @@ console.log(true || truth);
 
 const books = ["Sezon burz", "Kwantechizm 2.0", "Teirua muzyki", "1983"];
 
+//how it is supposed to be in future?
 let foundBook: string | undefined;
 
 for (let book of books) {
@@ -44,6 +45,7 @@ console.log("Status 2 " + orderStatus);
 orderStatus = "shipped";
 console.log("Status 3 " + orderStatus);
 
+///arrays
 let columns: string[] = ["DataSource", "ExpireDate", "ProductName"];
 
 for (let index = 0; index < columns.length; index++) {
@@ -55,6 +57,7 @@ let temperatures: number[] = [20, 25, 30];
 //temperatures.push('hot');
 //temperatures.pop();
 
+//objects
 let car: { brand: string; year: number } = { brand: "toyota", year: 2020 };
 
 car.brand = "ford";
@@ -81,6 +84,8 @@ products.push({ title: "shoes", price: 300 });
 console.log(products);
 
 //tsconfig in .netframework?
+
+//basic functions
 function printSomething(name: string) {
   console.log(`Something ${car.brand.toLocaleUpperCase()}  ${name}`);
 }
@@ -89,13 +94,15 @@ function calculateSomething(price: number): number {
   return price * 0.666;
 }
 
-printSomething("dupota ");
+printSomething("jakis name ");
 
 console.log(calculateSomething(4.2));
 
-//
+//challenge
+
 const namez: string[] = ["John", "Josh", "Michael"];
 
+//two ways
 function checkIfIsInArray(name: string, names: string[]): boolean {
   let isInArray: boolean = false;
   //return names.includes(name);
@@ -111,12 +118,16 @@ console.log(
   `Is ${checkName} in the namez array? ${checkIfIsInArray(checkName, namez)}`
 );
 
+//optional and default
+
 //optional parameter when undefined
 //undefined, null, 0 "" are falsy
 function calculatePrice(price: number, discount?: number): number {
-  return price - (discount || 0);
-  //return price - (discount ?? 0);
+  //return price - (discount || 0);
+  return price - (discount ?? 0);
 }
+
+//a function with optional parameters must work when they are not supplied!!
 
 let priceAfterDiscount = calculatePrice(100, 2);
 console.log(priceAfterDiscount);
@@ -132,6 +143,7 @@ function calculateScore(
 let scoreAfterPenalty = calculateScore(100, 20);
 let scoreWithoutPenalty = calculateScore(300);
 
+//rest parameter
 function sum(message: string, ...numbers: number[]): string {
   //lambda expression
   const doubled = numbers.map((num) => num * 2);
@@ -164,6 +176,8 @@ function processInput(param: string | number): void {
 processInput(20);
 processInput("Lalala");
 
+//functions with objects
+
 function createEmployee({ id }: { id: number }): {
   id: number;
   isActive: boolean;
@@ -191,6 +205,8 @@ const newStudent = {
 createStudent(newStudent);
 //createStudent({id:1, name: 'klaudia', email:'klaks@gmail.com'});
 
+//challenge
+
 function processData(
   input: string | number,
   config: { reverse: boolean } = { reverse: false }
@@ -210,6 +226,7 @@ console.log(processData("Hey", { reverse: true }));
 
 //type alias and intersection type
 
+//without types we need to write it all over
 const john: { id: number; name: string; isActive: boolean } = {
   id: 1,
   name: "john",
@@ -246,6 +263,8 @@ function setTheme(t: Theme) {
 
 setTheme("dark");
 
+//challenge
+
 type Employee = { id: number; name: string; department: string };
 const Susan: Employee = { id: 8, name: "Susan", department: "HR" };
 
@@ -257,9 +276,11 @@ const John: Employee = { id: 4, name: "John", department: "HR" };
 
 const Steve: Manager = { id: 8, name: "Steve", employees: [John, Susan] };
 
-//how is this possible that intelisense knows which type it is?
+//must be a union type to check that
+//
 function printStaffDetails(staff: Staff): void {
   if ("employees" in staff) {
+    //we can use property
     let count = staff.employees.length;
     console.log(
       `The person ${staff.name} is a manager. They manage ${count} employees.`
@@ -305,6 +326,7 @@ const discountedBook: DiscountedBook = {
   discount: 0.15,
 };
 
+//compute on the fly
 const propName = "age";
 
 type Animal = {

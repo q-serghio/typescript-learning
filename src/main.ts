@@ -2,9 +2,14 @@ import "./style.css";
 import typescriptLogo from "./typescript.svg";
 import viteLogo from "/vite.svg";
 import { setupCounter } from "./counter.ts";
-import "./tutorial.ts";
+//import "./tutorial.ts";
 //this needed tsconfig change
-import "./tutorial2.ts";
+//import "./tutorial2.ts";
+//import "./tutorial3.ts";
+//import "./tutorial4.ts";
+//import "./tutorial5.ts";
+//import "./tuplesEnums.ts";
+import "./typeAssertTypeUnknowTypeNever.ts";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
