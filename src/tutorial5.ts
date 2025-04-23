@@ -25,7 +25,7 @@ function generateRandomNumber(): number {
  * @param randNumber number to compare
  * @returns One of the 3 types of objects.
  */
-function getEmployee(randNumber: number): Person | DogOwner | Manager {
+export function getEmployee(randNumber: number): Person | DogOwner | Manager {
   let mainName = "James";
   let mainDoggy: string = "Doggy";
   console.log(randNumber);
@@ -54,8 +54,10 @@ function getEmployee(randNumber: number): Person | DogOwner | Manager {
     return someManager;
   }
 }
+
+//const book2 = 'sds'
 let someNumber = generateRandomNumber();
-const employee: Person | DogOwner | Manager = getEmployee(someNumber);
+export const employee: Person | DogOwner | Manager = getEmployee(someNumber);
 
 console.log(employee);
 

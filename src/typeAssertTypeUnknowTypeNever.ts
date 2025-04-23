@@ -1,8 +1,8 @@
 let someValue: any = "some string";
 
 let strLength: number = (someValue as string).length;
-
-type Bird = {
+//export test
+export type Bird = {
   name: string;
 };
 
@@ -37,7 +37,7 @@ const statusValue = "pending";
 //cannot do that:
 //const user: User = {name:'john', status:statusValue}
 
-const user: User = { name: "john", status: statusValue as Status };
+export const user: User = { name: "john", status: statusValue as Status };
 
 //unknowns
 
