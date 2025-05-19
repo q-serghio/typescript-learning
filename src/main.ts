@@ -11,7 +11,9 @@ import { setupCounter } from "./counter.ts";
 //import "./tuplesEnums.ts";
 //import "./typeAssertTypeUnknowTypeNever.ts";
 //import "./modules8.ts";
-import "./typeguarding.ts";
+//import "./typeguarding.ts";
+// import "./classes.ts";
+import "./fetchData.ts";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
