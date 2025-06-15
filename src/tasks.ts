@@ -1,5 +1,5 @@
 console.log("test");
-//here we state that we are sure it egsists
+//here we state that we are sure it exists
 const btn = document.querySelector(".test-btn")!;
 //two options
 const button = document.querySelector<HTMLButtonElement>(".test-btn");
